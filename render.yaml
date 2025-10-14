@@ -1,0 +1,13 @@
+version: v1
+services:
+  - type: web 
+    name: yt-dl-cache-service
+    env: node
+    repo: https://github.com/yuzu875641/ytdlp-cache
+    branch: main
+    buildCommand: npm install
+    startCommand: node server.js
+    plan: free 
+    envVars:
+      - key: NODE_ENV
+        value: production
