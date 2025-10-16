@@ -64,7 +64,7 @@ app.get('/api/cache', (req, res) => {
         cacheStatus.push({
             videoid: videoid,
             // 分と秒に変換して表示
-            remainingTime: `${Math.floor(remainingSeconds / 240)}分 ${remainingSeconds % 60}秒`,
+            remainingTime: `${Math.floor(remainingSeconds / 60)}分 ${remainingSeconds % 60}秒`,
             remainingTTL_ms: remainingMs
         });
     }
